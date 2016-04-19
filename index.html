@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+    <div class="players-table">
+    </div>
+
+    <script id="ranking" type="text/x-handlebars-template">
+        {{#each playersData}}
+        <h5>Name: {{ name }}</h5>
+        <h5>Current Rank: {{ currentRank }}</h5>
+        <h5>Rank Group: {{ rankGroup }}</h5>
+        {{/each}}
+    </script>
+
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script src="node_modules/underscore/underscore.js"></script>
+  <script src="node_modules/backbone/backbone.js"></script>
+  <script src="main.js"></script>
+
+  </body>
+</html>
