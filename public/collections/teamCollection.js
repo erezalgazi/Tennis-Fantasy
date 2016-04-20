@@ -1,3 +1,4 @@
 var TeamCollection = Backbone.Collection.extend ({
-  model: PlayerModel
+  model: PlayerModel,
+  comparator: 'rankGroup'
 });

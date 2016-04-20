@@ -16,24 +16,48 @@ var PlayerView = Backbone.View.extend ({
     if (this.$el.hasClass('off')) {
       return;
     }
-    this.$el.toggleClass('chosen');    
-    // $(e.currentTarget).toggleClass('chosen');
-    var selectedRank = this.model.get('rankGroup');
-    // console.log(selectedRank);
-    var toDisable = this.$el.siblings('.rank' + selectedRank);
-    console.log(toDisable);
-    // console.log(toDisable[0]);
-    // console.log($('.toDisable[0].className').children());
-    toDisable.each(function (index, element) {
-      console.log(index, element);
-      $(element).toggleClass('off');
-    });
+    if (!this.$el.hasClass('chosen')) {
+
+      this.$el.toggleClass('chosen');    
+      // $(e.currentTarget).toggleClass('chosen');
+      var selectedRank = this.model.get('rankGroup');
+      // console.log(selectedRank);
+      var toDisable = this.$el.siblings('.rank' + selectedRank);
+      console.log(toDisable);
+      // console.log(toDisable[0]);
+      // console.log($('.toDisable[0].className').children());
+      toDisable.each(function (index, element) {
+        console.log(index, element);
+        $(element).toggleClass('off');
+      });
+
+      this.collection.add(this.model);
+    }
+    else {
+      this.$el.toggleClass('chosen');    
+      // $(e.currentTarget).toggleClass('chosen');
+      var selectedRank = this.model.get('rankGroup');
+      // console.log(selectedRank);
+      var toDisable = this.$el.siblings('.rank' + selectedRank);
+      console.log(toDisable);
+      // console.log(toDisable[0]);
+      // console.log($('.toDisable[0].className').children());
+      toDisable.each(function (index, element) {
+        console.log(index, element);
+        $(element).toggleClass('off');
+      });
+      this.collection.remove(this.model);  
+    }
+
     // for (var i=0; i<toDisable.length; i++) {
     //   $(toDisable[i]).toggleClass('off');
     // }
   // }
   },
 
+  createTeam: function () {
+
+  },
 
   render: function () {
     // console.log(this.$el.html())
