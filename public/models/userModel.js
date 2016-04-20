@@ -1,4 +1,5 @@
 var UserModel = Backbone.Model.extend ({
+  idAttribute: '_id',
   defaults: {
     teamCollection: new TeamCollection()  
   },
