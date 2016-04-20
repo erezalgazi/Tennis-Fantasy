@@ -22,7 +22,7 @@ app.get('/players', function (req, res) {
   // Beer arrives from schema. here we find the beers that are inside the database birot
   Player.find(function (error, whatsinsidethedb) {
     // console.log("test");
-    // console.log(beers);
+    console.log(whatsinsidethedb);
     
 
     // sends back to the collection and fires reset event

@@ -3,20 +3,40 @@
   <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.min.css">
 
   </head>
   <body>
 
-    <div class="players-table">
+    <div class="players-table container">
+    <div class="row">
+      <h1 class="row-title col-sm-6 col-sm-offset-3 text-center">Rank Group 1</h1>
+      <div class="rank1-row row"></div>
     </div>
-    <button id="create-btn" class="btn btn-primary">Create Team</button>
-    <div class="team-not-complete"></div>
+    <div class="row">
+      <h1 class="row-title col-sm-6 col-sm-offset-3 text-center">Rank Group 2</h1>
+      <div class="rank2-row row"></div>
+    </div>
+    <div class="row">
+      <h1 class="row-title col-sm-6 col-sm-offset-3 text-center">Rank Group 3</h1>
+      <div class="rank3-row row"></div>
+    </div>
+    <div class="row">
+      <h1 class="row-title col-sm-6 col-sm-offset-3 text-center">Rank Group 4</h1>
+      <div class="rank4-row row"></div>
+    </div>
+    <div class="row">
+      <h1 class="row-title col-sm-6 col-sm-offset-3 text-center">Rank Group 5</h1>
+      <div class="rank5-row row"></div>
+    </div> 
+    </div>
+    <button id="create-btn" class="btn btn-primary col-md-2 col-md-offset-5">Create Team</button></br></br>
+    <div class="team-not-complete label label-danger col-md-2 col-md-offset-5"></div>
 
     <script id="ranking" type="text/x-handlebars-template">
-        <div class="player-div rank{{rankGroup}}">
-          <h5>Name: {{ name }}</h5>
-          <h5>Current Rank: {{ currentRank }}</h5>
-          <h5>Rank Group: {{ rankGroup }}</h5>
+        <div class="player-div rank{{rankGroup}} col-sm-6 col-sm-offset-3">
+          <h5 class="text-center">Name: {{ name }}</h5>
+          <h5 class="text-center">Current Rank: {{ currentRank }}</h5>
         </div>
     </script>
 

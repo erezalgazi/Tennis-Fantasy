@@ -1,6 +1,8 @@
 .player-div {
-  background-color: #EAEBE7;
-  margin: 30px; 
+  /*background-color: #EAEBE7;*/
+  background-color: #b3e6ff;
+  margin: 30px;
+  border-radius: 20px; 
 }
 
 .player-div:hover {
@@ -12,7 +14,8 @@
 }
 
 .chosen div {
-  background-color: green;
+  /*background-color: green;*/
+  border: 1px solid green;
 }
 
 .off div {
@@ -22,4 +25,22 @@
 
 .team-not-complete {
   color: red;
+}
+
+.rank1-row,.rank2-row,.rank3-row,.rank4-row,.rank5-row {
+  display: none;
+}
+
+.divider {
+  width: 1px;
+  display: inline-block;
+  background-color: black;
+}
+
+.inb {
+  display: inline-block;
+}
+
+.show {
+  display: block;
 }
