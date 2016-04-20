@@ -1,0 +1,21 @@
+.player-div {
+  background-color: #EAEBE7;
+  margin: 30px; 
+}
+
+.player-div:hover {
+  cursor: pointer;
+}
+
+.choose {
+  text-decoration: none;
+}
+
+.chosen div {
+  background-color: green;
+}
+
+.off div {
+  /*background-color: red;*/
+  opacity: 0.4;
+}

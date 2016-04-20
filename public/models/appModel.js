@@ -1,5 +1,6 @@
 var AppModel = Backbone.Model.extend({
   defaults: {
-    playersCollection: new PlayersCollection()
+    playersCollection: new PlayersCollection(),
+    teamCollection: new TeamCollection()
   }
 });

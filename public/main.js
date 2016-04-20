@@ -52,19 +52,12 @@ var playersData =
   {name: 'Alexander Zverev', currentRank: 50, rankGroup:5}
 ];
 
-  var showTable = function () {
-
-      var source = $('#ranking').html();
-
-      var template = Handlebars.compile(source);
-
-      var newHTML = template({playersData});
-
-      $('.players-table').append(newHTML);
-  };
-
-  showTable();
-
   
 var appModel = new AppModel();
 var appView = new AppView({model: appModel});
+
+//playersData.each(function (index, element) {
+  // console.log((appModel.get('playersCollection')).toJSON());
+  appModel.get('playersCollection').add(playersData);
+  // console.log(JSON.stringify(appModel.get('playersCollection')));
+//});

@@ -2,18 +2,21 @@
 <html>
   <head>
     <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
   </head>
   <body>
 
     <div class="players-table">
     </div>
+    <button id="create-btn" class="btn btn-primary">Create Team</button>
 
     <script id="ranking" type="text/x-handlebars-template">
-        {{#each playersData}}
-        <h5>Name: {{ name }}</h5>
-        <h5>Current Rank: {{ currentRank }}</h5>
-        <h5>Rank Group: {{ rankGroup }}</h5>
-        {{/each}}
+        <div class="player-div rank{{rankGroup}}">
+          <h5>Name: {{ name }}</h5>
+          <h5>Current Rank: {{ currentRank }}</h5>
+          <h5>Rank Group: {{ rankGroup }}</h5>
+        </div>
     </script>
 
 
@@ -24,7 +27,9 @@
   <script src="../node_modules/backbone/backbone.js"></script>
   <script src="models/playerModel.js"></script>
   <script src="collections/playersCollection.js"></script>
+  <script src="collections/teamCollection.js"></script>
   <script src="models/appModel.js"></script>
+  <script src="views/playerView.js"></script>
   <script src="views/appView.js"></script>
   <script src="main.js"></script>
 
