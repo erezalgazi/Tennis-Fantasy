@@ -23,7 +23,7 @@ var AppView = Backbone.View.extend ({
       userCollection.create(userModel);
       console.log(JSON.stringify(userCollection));
 
-      $('.team-not-complete').append("<a href='confirm-team.html'>hjgjh</a>");
+      window.location = 'confirm-team.html';
     }
   },
 
