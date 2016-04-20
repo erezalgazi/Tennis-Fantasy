@@ -3,7 +3,8 @@ var AppView = Backbone.View.extend ({
   el: 'body',
 
   events:{
-    'click #create-btn': 'createTeam'
+    'click #create-btn': 'createTeam',
+    'click .row-title': 'toggleLists'
   },
 
   initialize: function () {
@@ -29,12 +30,13 @@ var AppView = Backbone.View.extend ({
 
   renderPlayer: function (model) {
     // console.log((model.toJSON()));
-    var view = new PlayerView({model: model, collection: this.model.get('teamCollection'), className: 'rank' + model.get('rankGroup')});
+    var className = 'rank' + model.get('rankGroup');
+    var view = new PlayerView({model: model, collection: this.model.get('teamCollection'), className: className});
     // console.log(JSON.stringify(view.$el.html()));
     // console.log(view.render());
     // view.render();
     // console.log(JSON.stringify(view.$el.html()));
-    $('.players-table').append(view.render().el); //because we return "this" in the render function inside playerView, we can chain the object it returns to el
+    $('.players-table').find('.' + className + '-row').append(view.render().el); //because we return "this" in the render function inside playerView, we can chain the object it returns to el
   },
   
   renderAll: function () {
@@ -42,6 +44,15 @@ var AppView = Backbone.View.extend ({
     this.model.get('playersCollection').each(function (element, index, list) {
       this.renderPlayer(element)
     }, this);
+  },
+
+  toggleLists: function(e){
+    console.log($(e.target).parent().siblings());
+    if($(e.target).siblings('.row').hasClass('show')){
+      $(e.target).siblings('.row').removeClass('show');
+    }else{
+      $(e.target).siblings('.row').addClass('show');
+    }
   }
 
 });
