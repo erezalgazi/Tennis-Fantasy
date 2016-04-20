@@ -48,3 +48,18 @@ app.post('/users', function(req,res) {
   var user = new User(req.body);
   user.save();
 });
+
+app.delete('/users/:id', function (req,res) {
+  // console.log(req.params.id);
+  User.findById(req.params.id, function (err,user) {
+    if (err) {
+      res.status(500);
+      res.send(err);
+    }
+    else {
+      user.remove();
+      res.status(204);
+      res.end();
+    }
+  });
+});
