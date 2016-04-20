@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+
+  </head>
+  <body>
+
+    <div class="players-table">
+    </div>
+    <button id="create-btn" class="btn btn-primary">Create Team</button>
+    <div class="team-not-complete"></div>
+
+    <script id="ranking" type="text/x-handlebars-template">
+        <div class="player-div rank{{rankGroup}}">
+          <h5>Name: {{ name }}</h5>
+          <h5>Current Rank: {{ currentRank }}</h5>
+          <h5>Rank Group: {{ rankGroup }}</h5>
+        </div>
+    </script>
+
+
+  <script src="../jquery/dist/jquery.min.js"></script>
+  <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../handlebars/dist/handlebars.min.js"></script>
+  <script src="../underscore/underscore.js"></script>
+  <script src="../backbone/backbone.js"></script>
+  <script src="../models/playerModel.js"></script>
+  <script src="../collections/teamCollection.js"></script>
+  <script src="../models/userModel.js"></script>
+  <script src="../collections/playersCollection.js"></script>
+  <script src="../collections/userCollection.js"></script>
+  <script src="../models/appModel.js"></script>
+  <script src="../views/playerView.js"></script>
+  <script src="../views/appView.js"></script>
+  <script src="../main.js"></script>
+
+  </body>
+</html>

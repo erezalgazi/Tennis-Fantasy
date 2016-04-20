@@ -56,8 +56,13 @@ var playersData =
 var appModel = new AppModel();
 var appView = new AppView({model: appModel});
 
-//playersData.each(function (index, element) {
+// playersData.each(function (index, element)
   // console.log((appModel.get('playersCollection')).toJSON());
-  appModel.get('playersCollection').add(playersData);
   // console.log(JSON.stringify(appModel.get('playersCollection')));
-//});
+
+//this code is ran once to insert the data to the database. after it's there, we only need to fetch it.
+// for (var i=0;i<playersData.length;i++) {
+//   appModel.get('playersCollection').create(playersData[i]);
+// };
+
+appModel.get('playersCollection').fetch({reset: true});

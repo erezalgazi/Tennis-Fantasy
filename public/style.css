@@ -19,3 +19,7 @@
   /*background-color: red;*/
   opacity: 0.4;
 }
+
+.team-not-complete {
+  color: red;
+}

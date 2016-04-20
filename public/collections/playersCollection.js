@@ -1,3 +1,4 @@
 var PlayersCollection = Backbone.Collection.extend({
-  model: PlayerModel
+  model: PlayerModel,
+  url: '/players'
 });

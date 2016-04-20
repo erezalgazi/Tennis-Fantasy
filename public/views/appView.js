@@ -7,7 +7,8 @@ var AppView = Backbone.View.extend ({
   },
 
   initialize: function () {
-    this.listenTo(this.model.get('playersCollection'),'add',this.renderPlayer);
+    this.listenTo(this.model.get('playersCollection'), 'add', this.renderPlayer);
+    this.listenTo(this.model.get('playersCollection'), 'reset', this.renderAll);
   },
 
   createTeam: function () {
@@ -15,8 +16,12 @@ var AppView = Backbone.View.extend ({
       $('.team-not-complete').append('Team must consist of 5 players');
     }
     else {
-      console.log('here');
-      // var teamView = 
+      var userModel = new UserModel();
+      userModel.set('teamCollection',this.model.get('teamCollection'));
+      var userCollection = new UserCollection();
+      userCollection.create(userModel);
+      console.log(JSON.stringify(userCollection));
+
       $('.team-not-complete').append("<a href='confirm-team.html'>hjgjh</a>");
     }
   },
@@ -30,5 +35,13 @@ var AppView = Backbone.View.extend ({
     // view.render();
     // console.log(JSON.stringify(view.$el.html()));
     $('.players-table').append(view.render().el); //because we return "this" in the render function inside playerView, we can chain the object it returns to el
+  },
+  
+  renderAll: function () {
+    console.log(this.model.get('playersCollection'));
+    this.model.get('playersCollection').each(function (element, index, list) {
+      this.renderPlayer(element)
+    }, this);
   }
+
 });
