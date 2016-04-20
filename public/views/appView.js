@@ -2,11 +2,25 @@ var AppView = Backbone.View.extend ({
 
   el: 'body',
 
-  events:{},
+  events:{
+    'click #create-btn': 'createTeam'
+  },
 
   initialize: function () {
     this.listenTo(this.model.get('playersCollection'),'add',this.renderPlayer);
   },
+
+  createTeam: function () {
+    if (this.model.get('teamCollection').length != 5) {
+      $('.team-not-complete').append('Team must consist of 5 players');
+    }
+    else {
+      console.log('here');
+      // var teamView = 
+      $('.team-not-complete').append("<a href='confirm-team.html'>hjgjh</a>");
+    }
+  },
+
 
   renderPlayer: function (model) {
     // console.log((model.toJSON()));

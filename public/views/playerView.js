@@ -3,8 +3,7 @@ var PlayerView = Backbone.View.extend ({
   template: Handlebars.compile($('#ranking#ranking').html()),
 
   events: {
-    'click .player-div': 'selectPlayer',
-    'click .create-btn': 'createTeam'
+    'click .player-div': 'selectPlayer'
   },
 
   initialize: function () {
@@ -55,9 +54,6 @@ var PlayerView = Backbone.View.extend ({
   // }
   },
 
-  createTeam: function () {
-
-  },
 
   render: function () {
     // console.log(this.$el.html())
