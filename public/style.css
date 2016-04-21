@@ -9,10 +9,6 @@
   cursor: pointer;
 }
 
-.choose {
-  text-decoration: none;
-}
-
 .chosen div {
   /*background-color: green;*/
   border: 1px solid green;
