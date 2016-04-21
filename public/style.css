@@ -1,11 +1,11 @@
 .player-div {
   /*background-color: #EAEBE7;*/
   background-color: #b3e6ff;
-  margin: 30px;
+  margin-bottom: 30px;
   border-radius: 20px; 
 }
 
-.player-div:hover {
+.player-div:hover, .row-title:hover {
   cursor: pointer;
 }
 
