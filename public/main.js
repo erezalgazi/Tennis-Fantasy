@@ -30,7 +30,7 @@ var playersData =
   {name: 'Philipp Kohlschreiber', currentRank: 28, rankGroup:3},
   {name: 'Alexandr Dolgopolov', currentRank: 29, rankGroup:3},
   {name: 'Ivo Karlovic', currentRank: 30, rankGroup:3},
-  {name: 'Steve Johnson', currentRank: 31, rankGroup:3},
+  {name: 'Steve Johnson', currentRank: 31, rankGroup:4},
   {name: 'Jeremy Chardy', currentRank: 32, rankGroup:4},
   {name: 'Fabio Fognini', currentRank: 33, rankGroup:4},
   {name: 'Joao Sousa', currentRank: 34, rankGroup:4},

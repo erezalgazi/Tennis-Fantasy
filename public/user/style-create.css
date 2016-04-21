@@ -1,3 +1,10 @@
+body {
+  height: 100vh;
+  background: url('../img/court.jpg') no-repeat center fixed;
+  background-size: cover; 
+  position: relative;
+}
+
 .player-div {
   /*background-color: #EAEBE7;*/
   background-color: #b3e6ff;
@@ -25,15 +32,6 @@
 
 .rank1-row,.rank2-row,.rank3-row,.rank4-row,.rank5-row {
   display: none;
-}
-
-.photo {
-  margin-top: 50px;
-  height: 100vh;
-  background: url('img/Rafael-Nadal_93.jpg') no-repeat right fixed;
-  background-size: 60%;
-  /*float: right;*/
-  position: relative;
 }
 
 .explanation {
