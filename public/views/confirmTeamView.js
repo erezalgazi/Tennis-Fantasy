@@ -13,8 +13,9 @@ var ConfirmTeamView = Backbone.View.extend ({
 
   
   renderTeam: function (model) {
+    className = 'rank' + model.get('rankGroup');
     var view = new PlayerView({model: model});
-    $('.players-table').append(view.render().el);
+    $('.players-table').find('.' + className + '-row').append(view.render().el);
   },
 
   renderAll: function (collection) {

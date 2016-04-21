@@ -2,11 +2,37 @@
 <html>
 <head>
   <title></title>
+  <link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style-confirm.css">
+
 </head>
 <body>
 
-    <div class="players-table">
+
+    <div class="players-table container">
+      <div class="rank1-row col-sm-6 col-sm-offset-3 text-center"></div>
+      <div class="rank2-row col-sm-6 col-sm-offset-3 text-center"></div>
+      <div class="rank3-row col-sm-6 col-sm-offset-3 text-center"></div>
+      <div class="rank4-row col-sm-6 col-sm-offset-3 text-center"></div>
+      <div class="rank5-row col-sm-6 col-sm-offset-3 text-center"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 col-sm-offset-4">
+        <button id="create-btn" class="btn btn-primary">Confirm Team</button>
+      </div>    
+      <div class="col-sm-2">
+        <button id="back-btn" class="btn btn-primary">Change Team</button></br></br>
+      </div>
+    </div>    
+    <script id="ranking" type="text/x-handlebars-template">
+        <div class="player-div rank{{rankGroup}} col-sm-6 col-sm-offset-3">
+          <h5 class="text-center">Name: {{ name }}</h5>
+          <h5 class="text-center">Current Rank: {{ currentRank }}</h5>
+        </div>
+    </script>
+
+
+<!--     <div class="players-table">
     </div>
     <button id="create-btn" class="btn btn-primary">Confirm Team</button>
     <button id="back-btn" class="btn btn-primary">Back</button>
@@ -19,7 +45,7 @@
           <h5>Rank Group: {{ rankGroup }}</h5>
         </div>
     </script>
-
+ -->
   <script src="../jquery/dist/jquery.min.js"></script>
   <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="../handlebars/dist/handlebars.min.js"></script>

@@ -1,8 +1,25 @@
 .player-div {
-  background-color: #EAEBE7;
-  margin: 30px; 
+  /*background-color: #EAEBE7;*/
+  background-color: #b3e6ff;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border-radius: 20px; 
+}
+
+/*.create-btn {
+  display: inline-block;
+  float: left;
+}
+
+.back-btn {
+  display: inline-block;
+  float: left;
 }
 
 
+*/
 
+#create-btn {
+  float: right;
+}
 
