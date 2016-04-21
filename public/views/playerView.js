@@ -1,6 +1,6 @@
 var PlayerView = Backbone.View.extend ({
 
-  template: Handlebars.compile($('#ranking#ranking').html()),
+  template: Handlebars.compile($('#ranking').html()),
 
   events: {
     'click .player-div': 'selectPlayer'
