@@ -1,3 +1,8 @@
+body {
+  background: url('img/court.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+
 .player-div {
   /*background-color: #EAEBE7;*/
   background-color: #b3e6ff;
@@ -29,7 +34,7 @@
 
 .photo {
   height: 100vh;
-  background: url('img/court.jpg') no-repeat center fixed;
+  background: url('img/rafael-nadal-02.jpg') no-repeat center fixed;
   background-size: cover;
   position: relative;
 }
@@ -37,7 +42,7 @@
 .explanation {
   position: fixed;
   margin-top: 10%;
-  background-color: rgba(172, 172, 134,0.5);
+  background-color: rgba(172, 172, 134,0.3);
 }
 
 .show {
