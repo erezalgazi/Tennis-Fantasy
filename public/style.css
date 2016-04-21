@@ -1,16 +1,12 @@
 .player-div {
   /*background-color: #EAEBE7;*/
   background-color: #b3e6ff;
-  margin: 30px;
+  margin-bottom: 30px;
   border-radius: 20px; 
 }
 
-.player-div:hover {
+.player-div:hover, .row-title:hover {
   cursor: pointer;
-}
-
-.choose {
-  text-decoration: none;
 }
 
 .chosen div {
@@ -31,14 +27,17 @@
   display: none;
 }
 
-.divider {
-  width: 1px;
-  display: inline-block;
-  background-color: black;
+.photo {
+  height: 100vh;
+  background: url('img/court.jpg') no-repeat center fixed;
+  background-size: cover;
+  position: relative;
 }
 
-.inb {
-  display: inline-block;
+.explanation {
+  position: fixed;
+  margin-top: 10%;
+  background-color: rgba(172, 172, 134,0.5);
 }
 
 .show {
